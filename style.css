@@ -1,0 +1,263 @@
+@charset "UTF-8";
+@import "./resets.css";
+@font-face {
+  font-family: "proggy";
+  src: url("./proggy.ttf");
+}
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray: #999999;
+  --focus-gray: #cccccc;
+  --blue: #01007e;
+  --yellow: #ffff00;
+  --bg: #404040;
+  --card_margin: 5px;
+  font-size: 30px;
+  font-family: "proggy";
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.window {
+  padding: 22px;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.panel {
+  margin-top: 20px;
+  text-align: left;
+  color: var(--text_primary);
+  background-color: var(--gray);
+  display: inline-block;
+  box-shadow: 10px 10px var(--black);
+}
+
+.panel_header {
+  position: relative;
+  background: var(--blue);
+  color: var(--white);
+  padding: 3px;
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+
+.minimise_maximise_close {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.minimise_maximise_close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.close {
+  background: var(--gray);
+}
+.close svg {
+  fill: var(--black);
+  stroke: var(--black);
+}
+
+.panel_content {
+  padding: 12px;
+}
+
+.btn {
+  /* outline: 0; */
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background: var(--gray);
+  color: var(--black);
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
+  border-bottom: 2px solid var(--black);
+  border-right: 2px solid var(--black);
+  text-align: center;
+  width: 150px;
+  float: right;
+}
+.btn:hover {
+  background-color: var(--bg);
+  cursor: pointer;
+}
+
+.fieldset {
+  border: 6px var(--black) double;
+  padding: 12px;
+  background-color: inherit;
+  margin-bottom: 6px;
+}
+.fieldset legend {
+  color: var(--black);
+}
+.fieldset.no-legend {
+  margin-top: 6px;
+}
+
+input,
+select {
+  width: 400px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.input {
+  background-color: rgb(0, 0, 0);
+  color: var(--white);
+  outline: 0;
+  border: none;
+  border-radius: 0px;
+}
+.input:focus::placeholder {
+  opacity: 0.9;
+}
+.input:focus {
+  background-color: var(--white);
+  color: rgb(0, 0, 0) !important;
+  border: 1px solid var(--black);
+}
+
+.radio {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  color: var(--black);
+  padding-left: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.radio.disabled {
+  color: var(--white);
+}
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  margin-top: 0;
+}
+.radio span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+}
+.radio input:checked ~ span:after {
+  content: "(x)";
+  color: var(--white) !important;
+}
+.radio input:not(checked) ~ span:after {
+  content: "( )";
+}
+
+.input-fieldset {
+  border-top: 6px var(--black) double;
+  border-bottom: 6px var(--black) double;
+  border-left: 2px var(--black) solid;
+  border-right: 2px var(--black) solid;
+  padding: 5px;
+  background-color: inherit;
+}
+.input-fieldset legend {
+  color: var(--black);
+}
+.input-fieldset:hover {
+  border-color: var(--white);
+}
+.input-fieldset:hover legend {
+  color: var(--white);
+}
+
+#posts {
+  margin-top: 10px;
+}
+#posts article {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-left: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: 5px double #000;
+}
+#posts article * {
+  margin-top: 10px;
+}
+#posts article + *:first-child {
+  margin-top: 0px;
+}
+
+.options {
+  display: flex;
+  align-self: flex-end;
+  gap: 25px;
+}
+.options i {
+  font-size: 0.5rem;
+  cursor: pointer;
+}
+
+#status-fieldset {
+  width: 300px;
+}
+
+#status {
+  font-size: 25px;
+}
+
+.name_post,
+.date_post,
+.hair_post,
+.bio {
+  color: var(--white);
+  word-wrap: break-word;
+}
+
+.name_post::before {
+  content: "Name: ";
+}
+
+.date_post::before {
+  content: "Date Of Birth: ";
+}
+
+.hair_post::before {
+  content: "Hair Color: ";
+}
+
+.bio::before {
+  content: "Bio: ";
+  display: block;
+  margin-bottom: 10px;
+}
+
+.name_post::before,
+.date_post::before,
+.hair_post::before,
+.bio::before {
+  color: var(--black);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <div class="window">
+    <div class="panel">
+      <div class="panel_header">
+        <span>Info Panel</span>
+        <div class="minimise_maximise_close">
+          <div class="close">
+            <svg viewBox="0 0 16 16" xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg8">
+              <rect transform="rotate(45)" ry="0" y="-1" x="4.3137083" height="2" width="14" id="rect1006" style="
+                    opacity: 1;
+                    vector-effect: none;
+                    fill-opacity: 1;
+                    stroke: none;
+                    stroke-width: 4;
+                    stroke-linecap: square;
+                    stroke-linejoin: round;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    stroke-dashoffset: 3.20000005;
+                    stroke-opacity: 1;
+                  " />
+              <rect transform="rotate(-45)" ry="0" y="10.313708" x="-7" height="2" width="14" id="rect1006-5" style="
+                    opacity: 1;
+                    vector-effect: none;
+                    fill-opacity: 1;
+                    stroke: none;
+                    stroke-width: 4;
+                    stroke-linecap: square;
+                    stroke-linejoin: round;
+                    stroke-miterlimit: 4;
+                    stroke-dasharray: none;
+                    stroke-dashoffset: 3.20000005;
+                    stroke-opacity: 1;
+                  " />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel_content">
+        <fieldset class="fieldset">
+          <legend>Form</legend>
+          <form id="form">
+            <label for="name"> Full Name ...........: </label>
+            <input name="name" id="name" class="input" type="text" placeholder="Jane Doe" /><br />
+            <label for="date"> Date of birth .......: </label>
+            <input name="date" id="date" class="input" type="date" placeholder="2000-01-01" /><br />
+            <br />
+            <fieldset class="input-fieldset">
+              <legend>Hair Color</legend>
+              <label for="brown" class="radio">&nbsp; Brown
+                <input id="brown" value="Brown" type="radio" name="hair" checked />
+                <span></span>
+              </label>
+              <label for="blonde" class="radio">&nbsp; Blonde
+                <input id="blonde" value="Blonde" type="radio" name="hair" />
+                <span></span>
+              </label>
+              <label for="black" class="radio">&nbsp; Black
+                <input id="black" value="Black" type="radio" name="hair" />
+                <span></span>
+              </label>
+              <label for="red" class="radio">&nbsp; Red
+                <input id="red" value="Red" type="radio" name="hair" />
+                <span></span>
+              </label>
+            </fieldset>
+            <br />
+            <label for="bio"> Quick Bio </label>
+            <br />
+            <textarea name="bio" id="bio" class="input" placeholder=" Write a little bit about yourself"
+              rows="3"></textarea>
+            <br />
+            <br />
+            <button class="btn" type="submit">Submit!</button>
+            <div>
+              <span>Status...:</span>
+              <span id="status"></span>
+            </div>
+          </form>
+        </fieldset>
+        <br />
+        <br />
+        <fieldset class="fieldset">
+          <legend>People</legend>
+          <div id="posts">
+            <!--
+              <article>
+                <span class="name_post">Jane Doe</span>
+                <span class="date_post">1988-01-07</span>
+                <span class="hair_post">Blonde</span>
+                <p class="bio">
+                  Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+                  sint cillum sint consectetur cupidatat.
+                </p>
+                <span class="options">
+                  <i class="fas fa-edit" onclick="editPost(this)"></i>
+                  <i class="fas fa-trash-alt" onclick="deletePost(this)"></i>
+                </span>
+              </article>
+              -->
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
